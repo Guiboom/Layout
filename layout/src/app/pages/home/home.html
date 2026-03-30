@@ -11,7 +11,7 @@
       </p>
     </header>
 
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-center">
       
       <article *ngFor="let item of requisicao" 
                class="group relative flex flex-col p-8 transition-all duration-500 bg-white border cursor-pointer rounded-3xl border-slate-200 hover:border-rose-200 shadow-sm hover:shadow-2xl hover:shadow-rose-500/10 hover:-translate-y-3 w-full mx-auto max-w-sm">
@@ -24,7 +24,7 @@
           <h3 class="mb-4 text-xl font-bold tracking-tight text-slate-800 group-hover:text-rose-600 transition-colors">
             {{item.tecnologia}}
           </h3>
-          <p class="text-sm leading-relaxed text-slate-500 group-hover:text-slate-600">
+          <p class="text-sm leading-relaxed text-slate-600 group-hover:text-slate-600">
             {{item.descricao}}
           </p>
         </div>
