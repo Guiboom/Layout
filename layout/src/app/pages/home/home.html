@@ -1,24 +1,46 @@
-<main class="flex flex-col items-center min-h-screen p-8 bg-slate-50">
-    <header class="mb-12 text-center">
-        <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-600">
-            Tecnologias Front-End
-        </h2>
-        <p class="mt-3 text-lg font-medium text-indigo-500">
-            Conheça abaixo algumas Tecnologias Front-End
-        </p>
+<main class="min-h-screen p-6 bg-slate-50 md:p-12 flex flex-col items-center">
+  <div class="w-full max-w-7xl">
+    
+    <header class="mb-16 text-center">
+      <h2 class="pb-2 text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-600 md:text-5xl">
+        Tecnologias Front-End
+      </h2>
+      <div class="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-rose-500 to-amber-600"></div>
+      <p class="mt-6 text-lg font-medium text-slate-500">
+        Explore as ferramentas fundamentais para construir a web moderna.
+      </p>
     </header>
 
-    <div class="grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <article *ngFor="let item of requisicao" 
-                 class="flex flex-col p-6 transition-all duration-300 bg-white border cursor-pointer rounded-2xl border-slate-100 shadow-lg shadow-amber-600/10 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-500/20">
-            <div>
-                <h3 class="mb-3 text-xl font-bold text-slate-800">
-                    {{item.tecnologia}}
-                </h3>
-                <p class="text-sm leading-relaxed text-slate-600">
-                    {{item.descricao}}
-                </p>
-            </div>
-        </article>
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
+      
+      <article *ngFor="let item of requisicao" 
+               class="group relative flex flex-col p-8 transition-all duration-500 bg-white border cursor-pointer rounded-3xl border-slate-200 hover:border-rose-200 shadow-sm hover:shadow-2xl hover:shadow-rose-500/10 hover:-translate-y-3 w-full mx-auto max-w-sm">
+        
+        <div class="flex items-center justify-center w-12 h-12 mb-6 transition-colors duration-500 rounded-2xl bg-slate-100 group-hover:bg-rose-100">
+          <span class="text-xl group-hover:scale-110 transition-transform">🚀</span>
+        </div>
+
+        <div class="grow">
+          <h3 class="mb-4 text-xl font-bold tracking-tight text-slate-800 group-hover:text-rose-600 transition-colors">
+            {{item.tecnologia}}
+          </h3>
+          <p class="text-sm leading-relaxed text-slate-500 group-hover:text-slate-600">
+            {{item.descricao}}
+          </p>
+        </div>
+
+<!--         <div class="pt-6 mt-4 border-t border-slate-50">
+          <span class="text-xs font-bold uppercase tracking-widest text-rose-500 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+            Saiba mais →
+          </span>
+        </div> -->
+      </article>
+
     </div>
+
+  </div>
+
+  <footer class="mt-20 py-8 text-center border-t border-slate-200 w-full max-w-4xl text-slate-400 text-sm">
+    <p>© 2026 MeuApp - Todos os direitos reservados.</p>
+  </footer>
 </main>
