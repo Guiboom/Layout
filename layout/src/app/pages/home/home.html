@@ -1,13 +1,23 @@
-<main class="flex flex-col min-h-screen drop-shadow-amber-600">
-    <header class="md-10 text-center md:text-left">
-        <h2 class="text-3xl font-extrabold text-center text-shadow-rose-500">Tecnologias Front-End</h2>
-            <p class="my-3 text-lg text-indigo-500">Conheça abaixo algumas Tecnologias Front-End</p>
+<main class="flex flex-col items-center min-h-screen p-8 bg-slate-50">
+    <header class="mb-12 text-center">
+        <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-amber-600">
+            Tecnologias Front-End
+        </h2>
+        <p class="mt-3 text-lg font-medium text-indigo-500">
+            Conheça abaixo algumas Tecnologias Front-End
+        </p>
     </header>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
-        <article *ngFor="let item of requisicao">
+
+    <div class="grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article *ngFor="let item of requisicao" 
+                 class="flex flex-col p-6 transition-all duration-300 bg-white border cursor-pointer rounded-2xl border-slate-100 shadow-lg shadow-amber-600/10 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-500/20">
             <div>
-                <h3>{{item.tecnologia}}</h3>
-                <p>{{item.descricao}}</p>
+                <h3 class="mb-3 text-xl font-bold text-slate-800">
+                    {{item.tecnologia}}
+                </h3>
+                <p class="text-sm leading-relaxed text-slate-600">
+                    {{item.descricao}}
+                </p>
             </div>
         </article>
     </div>
